@@ -7,21 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7501CE62AA8C6FE00520200 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7501CE52AA8C6FE00520200 /* AccountViewController.swift */; };
+		C7501CE82AA8C73300520200 /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7501CE72AA8C73300520200 /* DrawViewController.swift */; };
+		C7501CEA2AA8EC0300520200 /* LogoUIVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7501CE92AA8EC0300520200 /* LogoUIVIew.swift */; };
+		C7501CED2AA8EF9000520200 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7501CEC2AA8EF9000520200 /* MainTableViewCell.swift */; };
+		C7501CEF2AA8EFA100520200 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7501CEE2AA8EFA100520200 /* ItemTableViewCell.swift */; };
+		C7501CF22AA9143000520200 /* CharTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7501CF12AA9143000520200 /* CharTableViewCell.swift */; };
+		C7501CF42AA9143F00520200 /* CanvasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7501CF32AA9143F00520200 /* CanvasTableViewCell.swift */; };
+		C7501CF62AA91C1200520200 /* StopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7501CF52AA91C1200520200 /* StopTableViewCell.swift */; };
 		C7FC54192AA7CA5200B840FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FC54182AA7CA5200B840FF /* AppDelegate.swift */; };
 		C7FC541B2AA7CA5200B840FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FC541A2AA7CA5200B840FF /* SceneDelegate.swift */; };
-		C7FC541D2AA7CA5200B840FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FC541C2AA7CA5200B840FF /* ViewController.swift */; };
+		C7FC541D2AA7CA5200B840FF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FC541C2AA7CA5200B840FF /* HomeViewController.swift */; };
 		C7FC54222AA7CA5300B840FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7FC54212AA7CA5300B840FF /* Assets.xcassets */; };
 		C7FC54252AA7CA5300B840FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7FC54232AA7CA5300B840FF /* LaunchScreen.storyboard */; };
+		C7FC54322AA7CE1A00B840FF /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FC54312AA7CE1A00B840FF /* TabBarVC.swift */; };
+		C7FC54352AA7CE9000B840FF /* SpotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FC54342AA7CE9000B840FF /* SpotifyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C7501CE52AA8C6FE00520200 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		C7501CE72AA8C73300520200 /* DrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
+		C7501CE92AA8EC0300520200 /* LogoUIVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoUIVIew.swift; sourceTree = "<group>"; };
+		C7501CEC2AA8EF9000520200 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		C7501CEE2AA8EFA100520200 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		C7501CF12AA9143000520200 /* CharTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharTableViewCell.swift; sourceTree = "<group>"; };
+		C7501CF32AA9143F00520200 /* CanvasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasTableViewCell.swift; sourceTree = "<group>"; };
+		C7501CF52AA91C1200520200 /* StopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTableViewCell.swift; sourceTree = "<group>"; };
 		C7FC54152AA7CA5200B840FF /* LutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FC54182AA7CA5200B840FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7FC541A2AA7CA5200B840FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C7FC541C2AA7CA5200B840FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C7FC541C2AA7CA5200B840FF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C7FC54212AA7CA5300B840FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7FC54242AA7CA5300B840FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7FC54262AA7CA5300B840FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7FC54312AA7CE1A00B840FF /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		C7FC54342AA7CE9000B840FF /* SpotifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +55,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7501CEB2AA8ED5B00520200 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C7501CE92AA8EC0300520200 /* LogoUIVIew.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C7501CF02AA9000700520200 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C7501CEC2AA8EF9000520200 /* MainTableViewCell.swift */,
+				C7501CEE2AA8EFA100520200 /* ItemTableViewCell.swift */,
+				C7501CF12AA9143000520200 /* CharTableViewCell.swift */,
+				C7501CF32AA9143F00520200 /* CanvasTableViewCell.swift */,
+				C7501CF52AA91C1200520200 /* StopTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		C7FC540C2AA7CA5200B840FF = {
 			isa = PBXGroup;
 			children = (
@@ -54,7 +94,6 @@
 		C7FC54172AA7CA5200B840FF /* LutApp */ = {
 			isa = PBXGroup;
 			children = (
-				C7FC541C2AA7CA5200B840FF /* ViewController.swift */,
 				C7FC542D2AA7CC1900B840FF /* Sources */,
 				C7FC542C2AA7CC0F00B840FF /* Resources */,
 			);
@@ -74,6 +113,10 @@
 		C7FC542D2AA7CC1900B840FF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C7501CF02AA9000700520200 /* Cells */,
+				C7501CEB2AA8ED5B00520200 /* Views */,
+				C7FC54332AA7CE6D00B840FF /* Screens */,
+				C7FC54302AA7CDF300B840FF /* Tabbar */,
 				C7FC542F2AA7CC7C00B840FF /* SceneDelegate */,
 				C7FC542E2AA7CC6F00B840FF /* AppDelegate */,
 			);
@@ -94,6 +137,25 @@
 				C7FC541A2AA7CA5200B840FF /* SceneDelegate.swift */,
 			);
 			path = SceneDelegate;
+			sourceTree = "<group>";
+		};
+		C7FC54302AA7CDF300B840FF /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				C7FC54312AA7CE1A00B840FF /* TabBarVC.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		C7FC54332AA7CE6D00B840FF /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C7FC541C2AA7CA5200B840FF /* HomeViewController.swift */,
+				C7FC54342AA7CE9000B840FF /* SpotifyViewController.swift */,
+				C7501CE72AA8C73300520200 /* DrawViewController.swift */,
+				C7501CE52AA8C6FE00520200 /* AccountViewController.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +228,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7FC541D2AA7CA5200B840FF /* ViewController.swift in Sources */,
+				C7FC54352AA7CE9000B840FF /* SpotifyViewController.swift in Sources */,
+				C7501CED2AA8EF9000520200 /* MainTableViewCell.swift in Sources */,
+				C7501CF22AA9143000520200 /* CharTableViewCell.swift in Sources */,
+				C7501CEF2AA8EFA100520200 /* ItemTableViewCell.swift in Sources */,
+				C7501CF62AA91C1200520200 /* StopTableViewCell.swift in Sources */,
+				C7FC541D2AA7CA5200B840FF /* HomeViewController.swift in Sources */,
+				C7501CE62AA8C6FE00520200 /* AccountViewController.swift in Sources */,
 				C7FC54192AA7CA5200B840FF /* AppDelegate.swift in Sources */,
+				C7501CE82AA8C73300520200 /* DrawViewController.swift in Sources */,
+				C7501CEA2AA8EC0300520200 /* LogoUIVIew.swift in Sources */,
+				C7FC54322AA7CE1A00B840FF /* TabBarVC.swift in Sources */,
 				C7FC541B2AA7CA5200B840FF /* SceneDelegate.swift in Sources */,
+				C7501CF42AA9143F00520200 /* CanvasTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,7 +386,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,7 +417,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
