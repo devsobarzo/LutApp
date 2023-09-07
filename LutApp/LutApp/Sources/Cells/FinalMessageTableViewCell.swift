@@ -1,5 +1,5 @@
 //
-//  StopTableViewCell.swift
+//  FinalMessageTableViewCell.swift
 //  LutApp
 //
 //  Created by Rober on 06/09/23.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class StopTableViewCell: UITableViewCell {
-    static let id = "StopTableViewCellId"
+class FinalMessageTableViewCell: UITableViewCell {
+    static let id = "FinalMessageTableViewCellId"
     
     var itemLabel: UILabel = UILabel()
     
@@ -23,18 +23,18 @@ class StopTableViewCell: UITableViewCell {
     }
 
     private func setupUI() {
-        itemLabel.textColor = .systemGreen
-        itemLabel.font = .systemFont(ofSize: 16, weight: .regular)
-        itemLabel.text = "item Label"
+        itemLabel.textColor = .systemRed
+        itemLabel.font = .systemFont(ofSize: 30, weight: .bold)
+        itemLabel.textAlignment = .center
         itemLabel.translatesAutoresizingMaskIntoConstraints = false
         
         contentView.addSubview(itemLabel)
 
         NSLayoutConstraint.activate([
-            itemLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
-            itemLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            itemLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 30),
+            itemLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             itemLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            itemLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            itemLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 5)
 
         ])
     }

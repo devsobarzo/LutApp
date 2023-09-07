@@ -32,7 +32,7 @@ class MainTableViewCell: UITableViewCell {
         contentView.addSubview(logoImage)
         
         NSLayoutConstraint.activate([
-            logoImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            logoImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
             logoImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
             logoImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
             logoImage.widthAnchor.constraint(equalToConstant: 60),

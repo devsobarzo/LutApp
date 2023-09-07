@@ -9,6 +9,9 @@ import UIKit
 
 class LogoUIView: UIView {
 
+    var logoImage: UIImageView = UIImageView()
+    var logoLabel: UILabel = UILabel()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLogo()
@@ -20,31 +23,30 @@ class LogoUIView: UIView {
     }
 
     private func setupLogo() {
-        let logoView = UIView()
-        logoView.backgroundColor = .blue
-        logoView.layer.cornerRadius = 20.0
-
-        addSubview(logoView)
-
-        logoView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            logoView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            logoView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
-            logoView.widthAnchor.constraint(equalToConstant: 100),
-            logoView.heightAnchor.constraint(equalToConstant: 100)
-        ])
+        logoImage.backgroundColor = .blue
+        logoImage.layer.cornerRadius = 20.0
+        logoImage.translatesAutoresizingMaskIntoConstraints = false
         
-        let logotypeLabel = UILabel()
-        logotypeLabel.text = "LutApp"
-        logotypeLabel.textColor = .black
-        logotypeLabel.font = UIFont.boldSystemFont(ofSize: 16)
-
-        addSubview(logotypeLabel)
-
-        logotypeLabel.translatesAutoresizingMaskIntoConstraints = false
+        logoLabel.text = "LutApp"
+        logoLabel.textColor = .black
+        logoLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        logoLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        addSubview(logoImage)
+        addSubview(logoLabel)
+        
         NSLayoutConstraint.activate([
-            logotypeLabel.leadingAnchor.constraint(equalTo: logoView.trailingAnchor, constant: 8),
-            logotypeLabel.centerYAnchor.constraint(equalTo: logoView.centerYAnchor)
+            
+            logoImage.topAnchor.constraint(equalTo: topAnchor, constant: 50),
+            logoImage.leadingAnchor.constraint(equalTo: leadingAnchor),
+            logoImage.widthAnchor.constraint(equalToConstant: 60),
+            logoImage.heightAnchor.constraint(equalToConstant: 60),
+            
+            logoLabel.topAnchor.constraint(equalTo: topAnchor, constant: 60),
+            logoLabel.leadingAnchor.constraint(equalTo: logoImage.trailingAnchor, constant: -10),
+            logoLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            logoLabel.heightAnchor.constraint(equalToConstant: 40),
+            logoLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
 }

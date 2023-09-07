@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  LutApp
 //
 //  Created by Rober on 05/09/23.
@@ -10,14 +10,16 @@ import UIKit
 enum CellType {
     case timer
     case startCounter
-    case stopCounter
+    case finalMessage
 }
 
 class HomeViewController: UIViewController {
     
-    private let titleLabel: UILabel = UILabel()
-    private let tableView: UITableView = UITableView()
+    private let stackView: UIStackView = UIStackView()
     private let logoImageView: UIImageView = UIImageView()
+    private let iniTitleLabel: UILabel = UILabel()
+    private let endTitleLabel: UILabel = UILabel()
+    private let tableView: UITableView = UITableView()
     
     let personSize = CGSize(width: 50, height: 50)
     
@@ -50,45 +52,55 @@ class HomeViewController: UIViewController {
     }
     
     private func setupUI(){
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
+        stackView.spacing = 8
+        
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         logoImageView.image = UIImage(named: "logo")
         logoImageView.tintColor = .red
+        logoImageView.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        logoImageView.heightAnchor.constraint(equalToConstant: 60).isActive = true
 
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.text = "LutApp"
-        titleLabel.textColor = .blue
-        titleLabel.font = .systemFont(ofSize: 24, weight: .bold)
+        iniTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        iniTitleLabel.text = "Lut"
+        iniTitleLabel.textColor = .blue
+        endTitleLabel.textAlignment = .left
+        iniTitleLabel.font = .monospacedDigitSystemFont(ofSize: 30, weight: .bold)
+        
+        endTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        endTitleLabel.text = "App"
+        endTitleLabel.textColor = .systemRed
+        endTitleLabel.textAlignment = .left
+        endTitleLabel.font = .italicSystemFont(ofSize: 20)
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
+        
         tableView.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.id)
         tableView.register(ItemTableViewCell.self, forCellReuseIdentifier: ItemTableViewCell.id)
-        tableView.register(StopTableViewCell.self, forCellReuseIdentifier: StopTableViewCell.id)
+        tableView.register(FinalMessageTableViewCell.self, forCellReuseIdentifier: FinalMessageTableViewCell.id)
     }
     
     private func setupLayout() {
-        view.addSubview(logoImageView)
-        view.addSubview(titleLabel)
+        view.addSubview(stackView)
+        stackView.addArrangedSubview(logoImageView)
+        stackView.addArrangedSubview(iniTitleLabel)
+        stackView.addArrangedSubview(endTitleLabel)
         view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
             
-            logoImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
-            logoImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            logoImageView.widthAnchor.constraint(equalToConstant: 60),
-            logoImageView.heightAnchor.constraint(equalToConstant: 60),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -250),
             
-            titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
-            titleLabel.leadingAnchor.constraint(equalTo: logoImageView.trailingAnchor, constant: -10),
-            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            titleLabel.heightAnchor.constraint(equalToConstant: 40),
-            
-            tableView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
+            tableView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 5),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 10)
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 5)
             
         
         ])
@@ -103,7 +115,7 @@ extension HomeViewController: UITableViewDelegate {
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -122,11 +134,11 @@ extension HomeViewController: UITableViewDataSource {
             cell.setupBotons(startImage: UIImage(systemName: "play")!, stopImage: UIImage(systemName: "stop")!)
             return cell
             
-        case .stopCounter:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: StopTableViewCell.id, for: indexPath) as? StopTableViewCell else {
+        case .finalMessage:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: FinalMessageTableViewCell.id, for: indexPath) as? FinalMessageTableViewCell else {
                 fatalError("Could not cast LogoTableViewCell")
             }
-            cell.setup(text: "Texto final")
+            cell.setup(text: "Bom Treino, galera!!")
             return cell
         }
     }
@@ -134,10 +146,10 @@ extension HomeViewController: UITableViewDataSource {
 
     func cellTypeForIndexPath(_ indexPath: IndexPath) -> CellType {
         
-        if indexPath.row == 4 {
+        if indexPath.row == 3 {
             return .startCounter
-        } else if indexPath.row == 5 {
-            return .stopCounter
+        } else if indexPath.row == 4 {
+            return .finalMessage
         } else {
             return .timer
         }
