@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundColor = .clear
+        tableView.backgroundColor = .black
         tableView.separatorStyle = .none
         tableView.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.id)
         tableView.register(ItemTableViewCell.self, forCellReuseIdentifier: ItemTableViewCell.id)
@@ -29,14 +29,15 @@ class MainViewController: UIViewController {
         tableView.dataSource = self
         return tableView
     }()
-   /*
-    lazy var headerView: TypeView = {
-            let view = TypeView()
+    
+    lazy var headerView: LogoUIView = {
+            let view = LogoUIView()
             view.translatesAutoresizingMaskIntoConstraints = false
             view.headerState(headerType: .dois)
+        view.backgroundColor = .yellow
             return view
         }()
-    */
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .green
@@ -48,17 +49,17 @@ class MainViewController: UIViewController {
 extension MainViewController {
     private func setupUI(){
         
-        logoUIView.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
-        
-        
-        self.view.addSubview(logoUIView)
-        
+        view.addSubview(headerView)
         view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
             
+            headerView.topAnchor.constraint(equalTo: view.topAnchor),
+            headerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            headerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            headerView.heightAnchor.constraint(equalToConstant:  110 + view.safeAreaInsets.top),
             
-            tableView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 10),
+            tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 10)

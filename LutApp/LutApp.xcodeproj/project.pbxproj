@@ -75,9 +75,9 @@
 			children = (
 				C7501CEC2AA8EF9000520200 /* MainTableViewCell.swift */,
 				C7501CEE2AA8EFA100520200 /* ItemTableViewCell.swift */,
+				C7501CF52AA91C1200520200 /* FinalMessageTableViewCell.swift */,
 				C7501CF12AA9143000520200 /* CharTableViewCell.swift */,
 				C7501CF32AA9143F00520200 /* CanvasTableViewCell.swift */,
-				C7501CF52AA91C1200520200 /* FinalMessageTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
