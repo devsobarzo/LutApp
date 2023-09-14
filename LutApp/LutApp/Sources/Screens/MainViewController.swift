@@ -16,7 +16,6 @@ enum CellsType {
 class MainViewController: UIViewController {
     
     let logoUIView = LogoUIView()
-    let nameAppUIView = NameAppUIView()
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -30,7 +29,14 @@ class MainViewController: UIViewController {
         tableView.dataSource = self
         return tableView
     }()
-    
+   /*
+    lazy var headerView: TypeView = {
+            let view = TypeView()
+            view.translatesAutoresizingMaskIntoConstraints = false
+            view.headerState(headerType: .dois)
+            return view
+        }()
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .green
@@ -43,18 +49,19 @@ extension MainViewController {
     private func setupUI(){
         
         logoUIView.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
-        nameAppUIView.frame = CGRect(x: 30, y: -10, width: 60, height: 60)
+        
         
         self.view.addSubview(logoUIView)
-        self.view.addSubview(nameAppUIView)
         
         view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: logoUIView.bottomAnchor, constant: 5),
+            
+            
+            tableView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 10),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 5)
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 10)
         ])
     }
     
