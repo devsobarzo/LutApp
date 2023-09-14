@@ -19,7 +19,7 @@ class TabBarVC: UITabBarController {
     
     private func setupTabBar() {
         
-        let homeVC = UINavigationController(rootViewController: HomeViewController())
+        let homeVC = UINavigationController(rootViewController: MainViewController())
         let spotifyVC = UINavigationController(rootViewController: SpotifyViewController())
         let drawVC = UINavigationController(rootViewController: DrawViewController())
         

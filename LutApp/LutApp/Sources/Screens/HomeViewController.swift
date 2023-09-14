@@ -20,7 +20,6 @@ class HomeViewController: UIViewController {
     private let iniTitleLabel: UILabel = UILabel()
     private let endTitleLabel: UILabel = UILabel()
     private let tableView: UITableView = UITableView()
-    
     let personSize = CGSize(width: 50, height: 50)
     
     override func viewDidLoad() {

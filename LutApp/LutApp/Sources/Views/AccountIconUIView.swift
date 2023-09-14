@@ -1,18 +1,18 @@
 //
-//  LogoUIVIew.swift
+//  AccountIconUIView.swift
 //  LutApp
 //
-//  Created by Rober on 06/09/23.
+//  Created by Rober on 13/09/23.
 //
 
 import UIKit
 
-class LogoUIView: UIView {
-    
-    lazy var logoImage: UIImageView = {
+class AccountIconUIView: UIView {
+
+    lazy var accountIconUIImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "logo")
+        image.image = UIImage(systemName: "person")
         image.layer.cornerRadius = 20.0
         image.tintColor = .green
         image.contentMode = .scaleAspectFit
@@ -28,19 +28,17 @@ class LogoUIView: UIView {
         super.init(coder: aDecoder)
         setupUI()
     }
-
     private func setupUI() {
         
-        addSubview(logoImage)
+        addSubview(accountIconUIImageView)
 
         NSLayoutConstraint.activate([
             
-            logoImage.topAnchor.constraint(equalTo: topAnchor, constant: 50),
-            logoImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            logoImage.widthAnchor.constraint(equalToConstant: 60),
-            logoImage.heightAnchor.constraint(equalToConstant: 60),
+            accountIconUIImageView.topAnchor.constraint(equalTo: topAnchor, constant: 50),
+            accountIconUIImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
+            accountIconUIImageView.widthAnchor.constraint(equalToConstant: 60),
+            accountIconUIImageView.heightAnchor.constraint(equalToConstant: 60),
             
         ])
     }
 }
-
